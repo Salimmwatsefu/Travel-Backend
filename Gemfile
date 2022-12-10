@@ -10,6 +10,8 @@ gem "faker"
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'active_model_serializers'
+
 # Use postgres as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 
