@@ -20,7 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_054621) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.string "name"
     t.string "title"
     t.string "image"
@@ -28,7 +27,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_054621) do
     t.float "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "tours", force: :cascade do |t|
@@ -53,5 +51,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_054621) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "reviews", "users"
 end
